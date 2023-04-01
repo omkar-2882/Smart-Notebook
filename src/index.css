@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap");
+
+
+body {
+  margin: 0;
+  font-family: "Chivo Mono", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./bg2.jpg");
+  background-size:100rem; 
+  background-repeat: repeat;
+  /* background: linear-gradient(270deg, #cf96f5, #ffdfd5); */
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+i {
+  cursor: pointer;
+}
+#pcontainer {
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  margin: 43px auto;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px -10px black;
+}
+#scontainer {
+  /* border: 2px solid black; */
+  padding: 40px 90px;
+  width: 50%;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#scontainer input {
+  background-color: transparent;
+  border: 1px solid blueviolet;
+}
+#scontainer input:focus-within {
+  /* outline: none; */
+  box-shadow: none;
+}
+#s1container {
+  width: 50%;
+  background-color: blueviolet;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* background-image: url("./bg1.jpg"); */
+  background-position: 50%;
+  background-size: cover;
+  background-blend-mode: color-burn;
+  opacity: 0.6;
+}
+
+.cblueviolet {
+  background-color: blueviolet;
+  color: white;
+  border: 1px solid blueviolet;
+  font-weight: 700;
+}
+
+.cblueviolet:hover {
+  background-color: white;
+  border: 1px solid blueviolet;
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.clight {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-weight: 700;
+}
+.clight:hover {
+  background-color: white;
+  color: blueviolet;
+}
+
+.center {
+  margin: 200px 0px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.gradientbg{
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+}
+
+#nav{
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  z-index: 1060;
+  height: 3.3rem;
+}
+
+#offcanvasWithBothOptions {
+  width: 17rem !important;
+  top: 49px;
+  background-image: url("./bg2.jpg");
+  /* background-color: khaki; */
+  /* background: linear-gradient(359deg, #cf96f5, #ffdfd5); */
+}
+
+.bv {
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size:1.4rem;
+  line-height: 2.4rem;
+}
+
+#hamicon,
+#profile {
+  color: white;
+}
+
+#offcanvasTop {
+  /* left: 30% !important;
+  right: 30% !important; */
+  top: 80px;
+  z-index: 1050;
+  height: 80%;
+}
+
+.transbg{
+  background-color: transparent;
+}
+
+#profilepic{
+  display: flex;
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100px;
+}
+
+#profilepic span{
+  margin: auto;
+  font-size: 4rem;
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#profileCard{
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  border-radius: 20px;
+}
+
+/* #profileCard img{
+  margin-top: 4px;
+  border: 2px solid black;
+  border-radius: 60px;
+} */
+
+#profileCard ul li{
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#notebook{
+  /* background-color: white; */
+  border: 2px solid rgb(237, 122, 156);
+  border-radius: 25px;
+  height: 30rem;
+  background-color: white;
+}
+
+#nform div *{
+  border: none;
+}
+#title{
+  font-size:1.8rem;
+  font-weight: bolder;
+}
+
+#nform div *:focus-within {
+  /* outline: none; */
+  box-shadow: none;
+}
+#AddNotebtn{
+  background-image: linear-gradient(45deg, #b546ff, #fe3d00);  
+  color: #fff;
+  width: 150px;
+  border: none;
+  border-radius: 25px;
+  margin: 14px 0px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+
+}
+
+#homec{
+  margin: 3rem 0;
+}
+
+#alert{
+  margin-top: 3.2rem;
+}
+
+#noteitem{
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  border-radius: 15px;
+}
+.textgradient{
+  font-size: 2rem;
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-dialog{
+  /* margin: 4rem auto; */
+  max-width: 600px;
+}
+
+.modal-content{
+  height: 35rem;
+  background: linear-gradient(45deg, #b546ff, #fe3d00);
+  border-radius: 15px;
+}
+
+.modal-content *{
+  background-color: transparent;
+  color: white;
+}
+
+.h1wd {
+  width: 30rem;
+}
+
+#eform div textarea{
+  resize:none;
+  height: 15rem;
+  background-color: transparent;
+  color: white;
+}
+
+.form-control{
+  border: transparent;
+}
+
+.form-control:focus-within{
+  box-shadow: none;
+}
+
+#etitle{
+  background-color: transparent;
+  color: white;
+}
+
+#utag{
+  position: absolute;
+  bottom: 40px;
+}
+#etag{
+  width: 12ch;
+  background-color: rgb(156, 170, 6);
+  color: white;
+  border-radius: 20px;
+}
