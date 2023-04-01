@@ -30,7 +30,7 @@ export const Signup = (props) => {
     }
     const onchange = (e) => {
         setCreds({ ...creds, [e.target.name]: e.target.value })
-        console.log(creds)
+        // console.log(creds)
     }
     return (
         <>
