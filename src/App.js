@@ -32,11 +32,11 @@ function App() {
     }, 3000);
   }
 
-  // window.addEventListener("unload", (ev) => {
-  //   ev.preventDefault();
-  //   // return ev.returnValue = 'Are you sure you want to close?';
-  //   localStorage.removeItem('token')
-  // });
+  window.addEventListener("unload", (ev) => {
+    ev.preventDefault();
+    // return ev.returnValue = 'Are you sure you want to close?';
+    localStorage.removeItem('token')
+  });
 
   return (
     <>

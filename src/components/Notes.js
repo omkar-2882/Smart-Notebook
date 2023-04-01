@@ -13,7 +13,7 @@ export const Notes = (props) => {
             getNotes()
         }
         else {
-            history.push("./login")
+            history.push("/login")
         }
         // eslint-disable-next-line
     }, [])
