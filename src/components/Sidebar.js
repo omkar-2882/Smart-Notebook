@@ -30,7 +30,6 @@ export const Sidebar = () => {
         })
         const json = await response.json()
         json.initial = json.name[0]
-        console.log(json)
         setuserDt(json)
     }
 

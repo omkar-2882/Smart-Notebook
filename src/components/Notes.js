@@ -38,7 +38,7 @@ export const Notes = (props) => {
     }
 
     const setWidth = (e) => {
-        console.log(e.target.value.length)
+        // console.log(e.target.value.length)
         e.target.style.width = 
             ((e.target.value.length + 4) + 'ch')
     }
