@@ -1,11 +1,12 @@
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "backend/config.env" });
+  console.log("Loading Environments variables!")
+  require("dotenv").config({ path: "config/config.env" });
 }
 
+const path = require("path");
 const connectToMongo = require('./db')
 const express = require('express')
-const path = require("path");
 
 var cors = require('cors') 
 
@@ -18,8 +19,8 @@ app.use(cors())
 app.use(express.json())
 
 // Available Routes
-app.use('/api/auth', require('./routes/auth'))
-app.use('/api/notes', require('./routes/notes'))
+// app.use('/api/auth', require('./routes/auth'))
+// app.use('/api/notes', require('./routes/notes'))
 
 
 // app.use(express.static(path.join(__dirname, "../build")));
@@ -32,8 +33,6 @@ app.get("/", (req,res) => {
   res.send("okay")
 })
 
-app.listen(port, () => {
-  console.log(`Smart Notebook listening at http://localhost:${port}`)
-})
-
-
+const server = app.listen(port, () => {
+  console.log(`Server is working on http://localhost:${port}`);
+});
