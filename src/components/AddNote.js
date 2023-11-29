@@ -28,14 +28,14 @@ export const AddNote = (props) => {
                     </div>
                     <div className="mb-3">
                         {/* <label htmlFor="description" className="form-label">Description</label> */}
-                        <textarea rows={6} type="text" className="form-control" placeholder='Start Writing Here...' id="description" name="description" value={note.description} onChange={onchange} minLength={5} required/>
+                        <textarea rows={6} type="text" className="form-control" placeholder='Start Writing Here...' id="description" name="description" value={note.description} onChange={onchange} minLength={1} required/>
                     </div>
                     <div className="mb-3">
                         {/* <label htmlFor="tag" className="form-label">Tag</label> */}
-                        <input type="text" className="form-control" placeholder='tag' id="tag" name="tag" value={note.tag} onChange={onchange} minLength={5} required/>
+                        <input type="text" className="form-control" placeholder='tag' id="tag" name="tag" value={note.tag} onChange={onchange} minLength={1} required/>
                     </div>
 
-                    <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn" id="AddNotebtn" onClick={handleClick}>Add Note</button>
+                    <button disabled={note.title.length<1 || note.description.length<1} type="submit" className="btn" id="AddNotebtn" onClick={handleClick}>Add Note</button>
                 </form>
             </div>
 

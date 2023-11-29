@@ -3,6 +3,8 @@ import noteContext from '../context/notes/noteContext'
 import { AddNote } from './AddNote'
 import { Noteitem } from './Noteitem'
 import { useHistory } from 'react-router-dom'
+import "./Notes.css"
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export const Notes = (props) => {
     const context = useContext(noteContext)
@@ -13,7 +15,7 @@ export const Notes = (props) => {
             getNotes()
         }
         else {
-            history.push("/login")
+            history.push("./login")
         }
         // eslint-disable-next-line
     }, [])
@@ -38,7 +40,7 @@ export const Notes = (props) => {
     }
 
     const setWidth = (e) => {
-        // console.log(e.target.value.length)
+        console.log(e.target.value.length)
         e.target.style.width = 
             ((e.target.value.length + 4) + 'ch')
     }
@@ -90,6 +92,9 @@ export const Notes = (props) => {
                     )
                 })}
             </div>
+            <Link to="./addNote">
+                <button className='addBtn'>+</button>
+            </Link>
         </>
     )
 }

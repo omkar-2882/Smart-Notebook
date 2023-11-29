@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./login.css";
+import "./signup.css";
 
 export const Login = (props) => {
   const [creds, setCreds] = useState({ email: "", password: "" });
   let history = useHistory();
+  const host = "http://localhost:5000"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch(host + "/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +18,6 @@ export const Login = (props) => {
       body: JSON.stringify(creds),
     });
     const json = await response.json();
-    // console.log(json)
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
       history.push("/");
@@ -28,37 +28,9 @@ export const Login = (props) => {
   };
   const onchange = (e) => {
     setCreds({ ...creds, [e.target.name]: e.target.value });
-    // console.log(creds)
   };
 
   return (
-    // <div id="pcontainer" className='d-flex'>
-
-    //     <div id="scontainer" className='container'>
-    //         <h2 className='text-center'>Login to Continue</h2>
-    //         <form className="" onSubmit={handleSubmit}>
-    //             <div className="mt-4 mb-3">
-    //                 <label htmlFor="email" className="form-label">Email address</label>
-    //                 <input type="email" className="form-control" value={creds.email} id="email" name="email" aria-describedby="emailHelp" required onChange={onchange} />
-    //             </div>
-    //             <div className="mb-3">
-    //                 <label htmlFor="password" className="form-label">Password</label>
-    //                 <input type="password" className="form-control" value={creds.password} id="password" name="password" required onChange={onchange} />
-    //             </div>
-    //             <div className='text-center'>
-    //                 <button type="submit" className="btn btn-primary cblueviolet" >Login</button>
-    //             </div>
-    //         </form>
-    //     </div>
-    //     <div id="s1container" className='container text-center '>
-    //         <div className="center">
-    //             <h2 className=''>New User!</h2>
-    //             <p>Don't have an account ?</p>
-    //             <Link to="./signup" type="submit" className="btn btn clight" >Sign Up</Link>
-    //         </div>
-    //     </div>
-
-    // </div>
     <div id="container" className="container">
       <div className="myCard">
         <div id="row" className="row">

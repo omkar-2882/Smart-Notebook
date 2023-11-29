@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap");
 
+*{
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -11,6 +15,7 @@ body {
   background-image: url("./bg2.jpg");
   background-size:100rem; 
   background-repeat: repeat;
+  font-size: 16px;
   /* background: linear-gradient(270deg, #cf96f5, #ffdfd5); */
 
 }
@@ -102,6 +107,10 @@ i {
   height: 3.3rem;
 }
 
+.logo {
+  color: white;
+}
+
 #offcanvasWithBothOptions {
   width: 17rem !important;
   top: 49px;
@@ -175,6 +184,10 @@ i {
   border-radius: 25px;
   height: 30rem;
   background-color: white;
+}
+
+#notebook textarea{
+  resize:none;
 }
 
 #nform div *{

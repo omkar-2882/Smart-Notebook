@@ -1,0 +1,12 @@
+.addBtn {
+    position: fixed;
+    bottom: 70px;
+    right: 100px;
+    text-align: center;
+    font-size: 2.3rem;
+    background: linear-gradient(45deg, #b546ff, #fe3d00);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+}

@@ -4,11 +4,15 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 import { Profile } from './Profile'
 
 export const Sidebar = () => {
+    const host = "http://localhost:5000"
+
+    // const [user, setUser] = useState(null);
     const [localstorage, setlocalstorage] = useState(1)
     const cref = useRef(null)
     let history = useHistory()
     const handleLogout = () => {
         localStorage.removeItem('token')
+        window.location.reload();
         setlocalstorage(0)
         history.push('./login')
     }
@@ -21,7 +25,7 @@ export const Sidebar = () => {
 
     const getUser = async () => {
         // API CALL
-        const response = await fetch(`http://localhost:5000/api/auth/getuser`, {
+        const response = await fetch(`${host}/api/auth/getuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,17 +34,23 @@ export const Sidebar = () => {
         })
         const json = await response.json()
         json.initial = json.name[0]
+        console.log(json)
         setuserDt(json)
     }
-
-
+    
     // let location = useLocation()
     return (
         <>
-            <div id="nav" className='navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between fixed-top top-0'>
+            <div id="nav" className='navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center fixed-top top-0'>
                 <button id="hamicon" className="btn shadow-none mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" role="" aria-controls="offcanvasWithBothOptions">
                     <i className="fa-solid fa-bars fa-xl"></i>
                 </button>
+                <Link className="nav-link nav-link" to="./">
+                    <div className='logo d-flex justify-content-center align-items-center gap-4'>
+                        <i className="fa-solid fa-pencil fa-2xl"></i>
+                        <h2 className='cName m-0'>Smart NoteBook</h2>
+                    </div>
+                </Link>
                 {
                     <button disabled={!localStorage.getItem('token')} id="profile" className="btn shadow-none mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" onClick={getUser}>
                         <i className="fa-solid fa-user fa-xl"></i>

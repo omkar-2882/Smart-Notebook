@@ -11,6 +11,7 @@ export const Profile = (props) => {
     const handleLogout = () => {
         props.close()
         localStorage.removeItem('token')
+        window.location.reload();
         setlocalstorage(0)
         history.push('./login')
     }
