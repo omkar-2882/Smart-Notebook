@@ -7,6 +7,7 @@ export const Login = (props) => {
   const [creds, setCreds] = useState({ email: "", password: "" });
   let history = useHistory();
   const host = "http://localhost:5000"
+  // const host = "https://smart-notebook-backend.vercel.app"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
