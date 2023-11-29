@@ -22,10 +22,14 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
 
 
-app.use(express.static(path.join(__dirname, "../build")));
+// app.use(express.static(path.join(__dirname, "../build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../build/index.html"));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../build/index.html"));
+// })
+
+app.get("/", (req,res) => {
+  res.send("h1")
 })
 
 app.listen(port, () => {
