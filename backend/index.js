@@ -29,9 +29,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../build/index.html"));
 })
 
-app.get("/", (req,res) => {
-  res.send("okay")
-})
+// app.get("/", (req,res) => {
+//   res.send("okay")
+// })
 
 const server = app.listen(port, () => {
   console.log(`Server is working on http://localhost:${port}`);
