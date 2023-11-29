@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 var jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser')
 
-const JWT_SECRET = 'OmkarSecret$key'
+const JWT_SECRET = process.env.JWT_SECRET
 
 // ROUTE 1: Create a User using: POST "/api/auth/createuser". Doesn't require Auth
 router.post('/createuser',
