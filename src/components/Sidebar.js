@@ -4,7 +4,9 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 import { Profile } from './Profile'
 
 export const Sidebar = () => {
-    const host = "http://localhost:5000"
+    // const host = "http://localhost:5000"
+    const host = ""
+
 
     // const [user, setUser] = useState(null);
     const [localstorage, setlocalstorage] = useState(1)
@@ -37,7 +39,7 @@ export const Sidebar = () => {
         console.log(json)
         setuserDt(json)
     }
-    
+
     // let location = useLocation()
     return (
         <>

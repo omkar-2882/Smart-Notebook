@@ -5,7 +5,9 @@ import './signup.css'
 
 export const Signup = (props) => {
     const [creds, setCreds] = useState({ name: "", email: "", password: "", cpassword: "" })
-    const host = "http://localhost:5000"
+    // const host = "http://localhost:5000"
+    const host = ""
+
     let history = useHistory()
 
     const handleSubmit = async (e) => {
